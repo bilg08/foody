@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import { useAgainGetDocs } from "../context/getDataAgainContext";
 import { getDocsFromFireBase } from "../firebaseForThisProject/getDocs";
 
 export const useGetDatasFromArrayofDoc = (collectionName) => {
   let [data, setData] = useState([]);
- const { againGetDocs } = useAgainGetDocs();
   const getDatas = async () => {
     setData((data = []));
     try {
@@ -35,6 +33,6 @@ export const useGetDatasFromArrayofDoc = (collectionName) => {
 
   useEffect(() => {
     getDatas();
-  }, [againGetDocs]);
+  });
   return data;
 };

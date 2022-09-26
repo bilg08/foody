@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getDocsFromFireBase } from "../firebaseForThisProject/getDocs";
 
 export const useGetAllOrdersDetails = () => {
-    const [count,setCount]=useState(0)
+    // const [count,setCount]=useState(0)
     const [data, setData] = useState({
         totalProfit: 0,
         ordersLength: 0,
@@ -12,7 +12,7 @@ export const useGetAllOrdersDetails = () => {
         ordersDataArray: [],
       });
     const getData = async () => {
-      setCount(0)
+      // setCount(0)
         try {
           const ordersOfFoods = await getDocsFromFireBase('foodsOrders');
           let counter = 0;
@@ -53,11 +53,11 @@ export const useGetAllOrdersDetails = () => {
             });
             /*************************************************************************** */
 
-            setCount((prevVal) => {
-              let prevValACopy = prevVal;
-              prevValACopy++;
-              return prevValACopy;
-            });
+            // setCount((prevVal) => {
+            //   let prevValACopy = prevVal;
+            //   prevValACopy++;
+            //   return prevValACopy;
+            // });
             setData((prevVal) => {
               
               let prevValACopy = prevVal;

@@ -15,7 +15,6 @@ import { Box } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import { useIsAdminLoggedContext } from "../context/isAdminLoggedContext";
-const drawerWidth = 240;
 export const Navbar = (props) => {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
