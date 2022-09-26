@@ -22,6 +22,6 @@ export const useGetDocsFromFireBase = (collectionName) => {
   useEffect(() => {
     getData();
     return(()=>setDatas([]))
-  }, [againGetDocs]);
+  });
   return [data];
 };
