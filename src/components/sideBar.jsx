@@ -123,7 +123,7 @@ export const Sidebar = (props) => {
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
-              background: `red`,
+              background: `#000723`,
               boxSizing: "border-box",
               width: drawerWidth,
             },
