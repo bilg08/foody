@@ -17,13 +17,12 @@ import { useSpinnerDatasContext } from "../context/spinnerContext";
 import { useAgainGetDocs } from "../context/getDataAgainContext";
 import { Input, styled, TextField } from "@mui/material";
 
-import { useRef } from "react";
-import { useEffect } from "react";
+
 
 export const AddNewFood = (props) => {
   const [foodImg, setFoodImg] = useState("");
-  const { isSpinning, setIsSpinning } = useSpinnerDatasContext();
-  const [isAddingData, setIsAddingData] = useState(false);
+  const { setIsSpinning } = useSpinnerDatasContext();
+  const [setIsAddingData] = useState(false);
   const { setAgainGetDocs } = useAgainGetDocs();
   const { isAddNewFoodFormOpen, setIsAddNewFoodFormOpen } = props.value;
   const [formIsNotFilled,setFormIsNotFilled]=useState(false);
@@ -58,7 +57,7 @@ export const AddNewFood = (props) => {
 
 
   const takeUserOrder = async () => {
-    if (ImageUrl!="",foodImg!="",foodform.foodDetail != "" && foodform.foodName != "" && foodform.foodPortion != "" && foodform.foodPortion!="") {
+    if (ImageUrl!=="",foodImg!=="",foodform.foodDetail !== "" && foodform.foodName !== "" && foodform.foodPortion !== "" && foodform.foodPortion!=="") {
         setIsSpinning(true);
         setIsAddNewFoodFormOpen(false);
         await setDocToFirebase(`foods/${foodform.foodName}`, foodform).then(

@@ -5,8 +5,6 @@ import {
   Toolbar,
   styled,
   IconButton,
-  InputLabel,
-  Select,
   MenuItem,
   Tooltip,
   Avatar,
@@ -15,11 +13,7 @@ import {
   Button,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import SearchIcon from "@mui/icons-material/Search";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useGetDocsFromFireBase } from "../customHook/getDocsCustomHook";
-import { useAgainGetDocs } from "../context/getDataAgainContext";
 import { useNavigate } from "react-router-dom";
 import { useIsAdminLoggedContext } from "../context/isAdminLoggedContext";
 const drawerWidth = 240;
@@ -29,53 +23,21 @@ export const Navbar = (props) => {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
   const { signOutFromWebSite } = useIsAdminLoggedContext();
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+  
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
 const drawerWidth = 240;
 
-  const StyledHeader = styled(Toolbar)(({ theme }) => ({
-    background: "#FFFFFF",
-    width: { sm: `calc(100% - ${drawerWidth}px)` },
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    position: "relative",
-    color: "black",
-    [theme.breakpoints.down('sm')]: {
-      width:`100%`
-    }
-  }));
-  const HeaderSectionWithAvatarAndSearchNotification = styled(Box)(
-    ({ theme }) => ({
-      width: `13%`,
-      height: `64px`,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-    })
-  );
-  const HeaderSectionWithAvatar = styled(Box)(({ theme }) => ({
-    border: "none",
-    borderRight: `1px solid #DFE0EB`,
-    width: `40%`,
-    height: `64px`,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    color: "black",
-  }));
+  
+ 
+  
   const styles = {
     menuButton: (theme) => ({
       color: "black",
