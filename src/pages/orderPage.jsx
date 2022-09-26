@@ -299,7 +299,6 @@ export const OrderPage = () => {
                         sx={{
                           borderRadius: `10px`,
                           border: `1px solid #DFE0EB`,
-                          borderRadius: `10px`,
                         }}>
                         <AccordionSummary
                           expandIcon={<ExpandMoreIcon />}

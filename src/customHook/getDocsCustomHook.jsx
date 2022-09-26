@@ -5,7 +5,7 @@ import { db } from "../firebaseForThisProject/firebase";
 
 export const useGetDocsFromFireBase = (collectionName) => {
   let [data, setDatas] = useState([]);
-  const { againGetDocs, setAgainGetDocs } = useAgainGetDocs();
+  const { againGetDocs } = useAgainGetDocs();
   const getData = async () => {
     try {
       const datas = await getDocs(collection(db, collectionName));

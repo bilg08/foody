@@ -1,7 +1,6 @@
-import { db, storage } from "./firebase";
+import { storage } from "./firebase";
 import { getDownloadURL, ref as sRef, uploadBytes } from "firebase/storage";
 import { setDocToFirebase } from "./setDoc";
-import { doc, getDoc } from "firebase/firestore";
 
 export const uploadImageToFirebase = async (
   file,
