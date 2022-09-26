@@ -5,31 +5,24 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import logo from "../asset/Logo.png";
 import { CardMedia } from "@mui/material";
-import { useIsAdminLoggedContext } from "../context/isAdminLoggedContext";
 
 const drawerWidth = 240;
 
 export const Sidebar = (props) => {
   console.log(props,'p');
   const { window } = props;
-  const handleDrawerOpen=props.handleDrawerOpen
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const whatPage = props.whatPage;
   const styles = {
     DrawerTop: (theme) => ({
       width: `80%`,

@@ -3,7 +3,6 @@ import * as React from "react";
 import {
   AppBar,
   Toolbar,
-  styled,
   IconButton,
   MenuItem,
   Tooltip,
@@ -18,8 +17,6 @@ import { useNavigate } from "react-router-dom";
 import { useIsAdminLoggedContext } from "../context/isAdminLoggedContext";
 const drawerWidth = 240;
 export const Navbar = (props) => {
-  console.log(props.handleDrawerOpen,'props')
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
   const { signOutFromWebSite } = useIsAdminLoggedContext();

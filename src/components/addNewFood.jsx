@@ -22,7 +22,6 @@ import { Input, styled, TextField } from "@mui/material";
 export const AddNewFood = (props) => {
   const [foodImg, setFoodImg] = useState("");
   const { setIsSpinning } = useSpinnerDatasContext();
-  const [setIsAddingData] = useState(false);
   const { setAgainGetDocs } = useAgainGetDocs();
   const { isAddNewFoodFormOpen, setIsAddNewFoodFormOpen } = props.value;
   const [formIsNotFilled,setFormIsNotFilled]=useState(false);
@@ -57,7 +56,7 @@ export const AddNewFood = (props) => {
 
 
   const takeUserOrder = async () => {
-    if (ImageUrl!=="",foodImg!=="",foodform.foodDetail !== "" && foodform.foodName !== "" && foodform.foodPortion !== "" && foodform.foodPortion!=="") {
+    if (ImageUrl!==""&&foodImg!==""&&foodform.foodDetail !== "" && foodform.foodName !== "" && foodform.foodPortion !== "" && foodform.foodPortion!=="") {
         setIsSpinning(true);
         setIsAddNewFoodFormOpen(false);
         await setDocToFirebase(`foods/${foodform.foodName}`, foodform).then(
@@ -273,7 +272,7 @@ export const styles = {
   showFoodIngredientsAdminAdded: (theme) => ({
     width: `50%`,
     height: `100%`,
-    background: "yellow",
+    background: "#aaa",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

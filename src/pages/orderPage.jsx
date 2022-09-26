@@ -22,7 +22,7 @@ export const OrderPage = () => {
   const newOrders = useGetDatasFromArrayofDoc("ThisDayOrders");
   const shippedOrders = useGetDatasFromArrayofDoc("shippedOrders");
   const packegedOrders = useGetDatasFromArrayofDoc("packegedOrders");
-  const { againGetDocs, setAgainGetDocs } = useAgainGetDocs();
+  const { setAgainGetDocs } = useAgainGetDocs();
   const NewOrders = () => {
     const changeOrderTypeAsShipped = async (orderedDate, orderUid, orderData) => {
       await setDocToFirebase(
@@ -203,7 +203,6 @@ export const OrderPage = () => {
                           sx={{
                             borderRadius: `10px`,
                             border: `1px solid #DFE0EB`,
-                            borderRadius: `10px`,
                           }}>
                           <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
@@ -371,10 +370,6 @@ export const OrderPage = () => {
   );
 };
 
-
-
-
-const drawerWidth = 240;
 
 export const styles = {
   AllOrdersContainer: (theme) => ({

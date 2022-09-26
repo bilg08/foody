@@ -71,7 +71,6 @@ const Food = (props) => {
                 alignItems: "center",
                 width: `100%`,
                 position: "relative",
-                width: `90%`,
                 flexDirection: "column",
                 fontSize: `18px`,
               }}
@@ -130,18 +129,13 @@ const Food = (props) => {
 };
 
 
-
-
-
-const drawerWidth = 240;
-
  const styles = {
   FoodsContainer: (theme) => ({
     width:`100%`,
     height: `auto`,
     p: 10,
     display: "flex",
-    background: "yellow",
+    background: "#163727",
     flexWrap: "wrap",
     gap: `10px`,
   }),

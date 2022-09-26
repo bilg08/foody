@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAgainGetDocs } from "../context/getDataAgainContext";
 import { getDocsFromFireBase } from "../firebaseForThisProject/getDocs";
-import { useGetDocsFromFireBase } from "./getDocsCustomHook";
 
 export const useGetDatasFromArrayofDoc = (collectionName) => {
   let [data, setData] = useState([]);

@@ -1,4 +1,4 @@
-import { setDoc, doc, getDoc } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 import { db } from "../firebaseForThisProject/firebase";
 
 export const setDocToFirebase = async (path, data) => {

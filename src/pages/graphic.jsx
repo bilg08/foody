@@ -1,10 +1,5 @@
 import * as React from "react";
 import { Card,Grid } from "@mui/material";
-import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
-
-import { useGetDatasFromArrayofDoc } from "../customHook/getDatasFromDocsArray";
-import { useGetDocsFromFireBase } from "../customHook/getDocsCustomHook";
-import { useEffect } from "react";
 import { useGetAllOrdersDetails } from "../customHook/getAllDatasForGraphic";
 import {
   Chart as ChartJS,
@@ -96,7 +91,6 @@ export const Graphic = () => {
   );
 };
 
-const drawerWidth = 240;
 export const styles = {
   GraphicComponentContainer: (theme) => ({
     width: `100%`,
